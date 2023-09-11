@@ -1,0 +1,54 @@
+{
+  "name": "quarkc-compare-image",
+  "version": "0.0.4",
+  "keywords": [
+    "frontend",
+    "quark",
+    "web components",
+    "compare-image"
+  ],
+  "scripts": {
+    "dev": "npm run start",
+    "start": "vite --host",
+    "build": "rimraf lib && vite build --config vite.config.build.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lch-coder/quarkc-compare-image.git"
+  },
+  "homepage": "https://unpkg.com/quarkc-compare-image/demo.html",
+  "files": [
+    "lib",
+    "demo.html",
+    "package.json",
+    "README.md"
+  ],
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.umd.cjs",
+      "types": "./lib/types/index.d.ts"
+    }
+  },
+  "dependencies": {
+    "css-element-queries": "^1.2.3",
+    "quarkc": "^1.0.4"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/node": "^20.2.5",
+    "less": "^4.1.3",
+    "postcss": "^8.4.24",
+    "rimraf": "^5.0.1",
+    "tslib": "^2.5.3",
+    "typescript": "^5.1.3",
+    "vite": "^4.3.0"
+  },
+  "engines": {
+    "node": ">=14.18.0"
+  }
+}
