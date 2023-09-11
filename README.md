@@ -1,4 +1,4 @@
-# quarkc-compare-image# quarkc-compare-image
+# quarkc-compare-image
 
 Image comparison component is realized based on Quarkc, modified according to vue-compare-image.
 
