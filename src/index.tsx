@@ -134,7 +134,6 @@ class QuarkCompareImage extends QuarkElement {
     if (pos > maxPos) pos = maxPos;
 
     this.positionPct = pos / this.imageWidth;
-    console.log(this, this.positionPct);
   };
 
   startSliding = (e) => {
@@ -150,20 +149,15 @@ class QuarkCompareImage extends QuarkElement {
   };
 
   finishSliding = () => {
-    console.log("触发。");
-
     window.removeEventListener("mousemove", this.updateSliderPosition);
     window.removeEventListener("touchmove", this.updateSliderPosition);
   };
 
   componentDidMount() {
-    console.log("this", this);
     new ResizeSensor(this.containerRef.current, () => {
       this.getAndSetImageWidth();
     });
     const containerElement = this.containerRef.current;
-
-    console.log("containerElement", containerElement);
 
     // for mobile
     containerElement.addEventListener("touchstart", this.startSliding);
